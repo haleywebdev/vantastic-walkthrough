@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { Beds } from "./Beds"
 import { Floors } from "./Floors"
-import { Vans } from "./Vans"
 import { Windows } from "./Windows"
 
 export const Vantastic = () => {
@@ -37,7 +36,6 @@ export const Vantastic = () => {
             <Floors choices={userChoice} setter={setUserChoice} />
             <Windows choices={userChoice} setter={setUserChoice} />
             <Beds choices={userChoice} setter={setUserChoice} />
-            <Vans foo="bar" monicaIsAwesome={true} />
         </>
     )
 }
