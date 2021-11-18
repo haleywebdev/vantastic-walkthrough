@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react"
 import { Beds } from "./Beds"
 import { Floors } from "./Floors"
-import { Vans } from "./Vans"
 import { Windows } from "./Windows"
 
-export const Vantastic = () => {
+export const VanBuilder = () => {
     const [userChoice, setUserChoice] = useState({
         floor: 0,
         bed: 0,
