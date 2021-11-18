@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min"
 import { Beds } from "./Beds"
 import { Floors } from "./Floors"
 import { Windows } from "./Windows"
@@ -12,6 +13,7 @@ export const VanBuilder = () => {
         neededBy: Date.now()
     })
     const [totalCost, updateTotalCost] = useState(0)
+    const history = useHistory()
 
     /*
         Single responsibility: Calculate cost of chosen options
@@ -84,7 +86,7 @@ export const VanBuilder = () => {
                 })
                     .then(response => response.json())
                     .then(() => {
-
+                        history.push("/purchases")
                     })
 
             }}>Complete Purchase</button>
