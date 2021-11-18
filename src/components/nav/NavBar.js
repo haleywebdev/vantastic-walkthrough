@@ -11,6 +11,16 @@ export const NavBar = () => {
             <li className="navbar__item active">
                 <Link className="navbar__link" to="/">Van Builder</Link>
             </li>
+            <li className="navbar__item">
+                <Link className="navbar__link" to="#"
+                    onClick={
+                        () => {
+                            localStorage.removeItem("vanner")
+                        }
+                    }>
+                    Logout
+                </Link>
+            </li>
         </ul>
     )
 }

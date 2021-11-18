@@ -44,7 +44,7 @@ export const Beds = ({choices, setter}) => {
                                     onClick={
                                         () => {
                                             const copy = {...choices}
-                                            copy.bed = bed.price
+                                            copy.bed = bed
                                             setter(copy)
                                         }
                                     }
