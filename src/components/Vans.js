@@ -25,7 +25,7 @@ export const Vans = () => {
                         return <div style={{
                             margin:"0.75rem"
                         }} key={van.id}>
-                            Van "{van.vanityName}" ordered by {van.user.name} needs {van.window.size.toLowerCase()} windows and {van.floor.type.toLowerCase()} floors and a {van.bed.type.toLowerCase()} bed and is needed by {van.neededBy}
+                            {van.user.name} ordered the van "{van.vanityName}" needs {van.window.size.toLowerCase()} windows and {van.floor.type.toLowerCase()} floors and a {van.bed.type.toLowerCase()} bed and is needed by {van.neededBy}
                         </div>
                     })
                 }

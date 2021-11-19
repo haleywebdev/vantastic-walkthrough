@@ -47,23 +47,32 @@ export const VanBuilder = () => {
 
             <fieldset>
                 <legend>Personalization</legend>
+
+
                 <label htmlFor="vanity"> Name your van </label>
-                <input type="email"
+                <input type="text"
+                    onChange={
+                        (event) => {
+                            const copyofState = {...userChoice}
+                            copyofState.vanity = event.target.value
+                            setUserChoice(copyofState)
+                        }
+                    }
                     id="vanity"
-                    onChange={evt => {
-                        const copy = {...userChoice}
-                        copy.vanity = evt.target.value
-                        setUserChoice(copy)
-                    }}
                     className="form-control"
                     required autoFocus />
-                <label htmlFor="inputEmail"> Needed by date </label>
+
+
+                <label htmlFor="neededBy"> Needed by date </label>
                 <input type="date"
-                    onChange={evt => {
-                        const copy = {...userChoice}
-                        copy.neededBy = evt.target.value
-                        setUserChoice(copy)
-                    }}
+                    onChange={
+                        (event) => {
+                            const copyofState = {...userChoice}
+                            copyofState.neededBy = event.target.value
+                            setUserChoice(copyofState)
+                        }
+                    }
+                    id="neededBy"
                     className="form-control"
                     required />
 
@@ -79,8 +88,8 @@ export const VanBuilder = () => {
                         floorId: userChoice.floor.id,
                         windowId: userChoice.window.id,
                         bedId: userChoice.bed.id,
-                        neededBy: userChoice.neededBy,
                         vanityName: userChoice.vanity,
+                        neededBy: userChoice.neededBy,
                         userId: parseInt(localStorage.getItem("vanner"))
                     })
                 })
