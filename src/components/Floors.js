@@ -36,7 +36,7 @@ export const Floors = ({choices, setter}) => {
                                     onClick={
                                         () => {
                                             const copy = {...choices}
-                                            copy.floor = floor.price
+                                            copy.floor = floor
                                             setter(copy)
                                         }
                                     }

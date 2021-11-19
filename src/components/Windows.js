@@ -43,7 +43,7 @@ export const Windows = (propertiesAsASingleObject) => {
                                     onClick={
                                         () => {
                                             const copy = {...propertiesAsASingleObject.choices}
-                                            copy.window = window.price
+                                            copy.window = window
                                             propertiesAsASingleObject.setter(copy)
                                         }
                                     }

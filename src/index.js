@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
-import { ApplicationViews } from './components/ApplicationViews';
+import { Vantastic } from './components/Vantastic';
+import './index.css';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <ApplicationViews />
+      <Vantastic />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

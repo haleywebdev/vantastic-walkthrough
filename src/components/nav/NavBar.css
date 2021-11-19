@@ -2,6 +2,9 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: left;
+    background-color: goldenrod;
+    border: 1px dotted fuchsia;
+    padding: 1rem;
 }
 
 .navbar__item {
