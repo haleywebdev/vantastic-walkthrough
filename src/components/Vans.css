@@ -1,0 +1,14 @@
+.rush {
+    color: fuchsia;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.regular {
+    color: goldenrod;
+}
+
+.preferred {
+    font-weight: bold;
+    color: black;
+}

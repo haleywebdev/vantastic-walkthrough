@@ -10,6 +10,7 @@ export const VanBuilder = () => {
         bed: {},
         window: {},
         vanity: "",
+        electric: false,
         neededBy: Date.now()
     })
     const [totalCost, updateTotalCost] = useState(0)
@@ -75,6 +76,17 @@ export const VanBuilder = () => {
                     id="neededBy"
                     className="form-control"
                     required />
+
+                <label htmlFor="neededBy"> Electric? (Type yes if you want electric)</label>
+                <input type="text" id="electric"
+                    onChange={
+                        (changeEvent) => {
+                            const copyofState = {...userChoice}
+                            copyofState.electric = !!changeEvent.target.value.length
+                            setUserChoice(copyofState)
+                        }
+                    }
+                />
 
             </fieldset>
 

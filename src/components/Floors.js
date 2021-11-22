@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-export const Floors = ({choices, setter}) => {
+export const Floors = ({ choices, setter }) => {
     const [floors, setFloors] = useState([])
 
     /*
@@ -30,20 +30,24 @@ export const Floors = ({choices, setter}) => {
         <>
             <div>
                 <h2>Floors</h2>
-                {
-                    floors.map(floor => {
-                        return <button
-                                    onClick={
-                                        () => {
-                                            const copy = {...choices}
-                                            copy.floor = floor
-                                            setter(copy)
-                                        }
-                                    }
-                                    className="floor"
-                                    key={floor.id}>{floor.type}</button>
-                    })
-                }
+                <select onChange={
+                    (changeEvent) => {
+                        const copy = { ...choices }
+                        copy.floor = floors.find(fll => fll.id === parseInt(changeEvent.target.value)) || {}
+                        setter(copy)
+                    }
+                }>
+                    <option value="0">Please choose a floor type...</option>
+                    {
+                        floors.map(floor => {
+                            return <option
+                                className="floor"
+
+                                value={floor.id}
+                                key={floor.id}>{floor.type}</option>
+                        })
+                    }
+                </select>
             </div>
 
         </>
